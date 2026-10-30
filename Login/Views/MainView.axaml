@@ -35,6 +35,17 @@
                      CornerRadius="8"
                      Text="{Binding Name}"
             />
+            
+            <TextBox
+                PlaceholderText="Password"
+                Width="250"
+                HorizontalAlignment="Center"
+                TextAlignment="Center"
+                CornerRadius="8"
+                PasswordChar="§"
+                Text="{Binding Password}"
+                IsEnabled="{Binding CanInsertPassword}"
+                />
         
             <Button
                 Content="{Binding StatusLogin}"
@@ -50,6 +61,12 @@
                 FontSize="12"
                 HorizontalAlignment="Center"
                 Margin="0,5,0,5"
+                />
+            
+            <ListBox
+                ItemsSource="{Binding NameList}"
+                SelectedItem="{Binding Name}"
+                SelectionMode="Single"
                 />
         </StackPanel>
     </Border>
